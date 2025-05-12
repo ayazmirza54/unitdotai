@@ -1,0 +1,22 @@
+{
+  "name": "unixdotai",
+  "version": "1.0.0",
+  "description": "A beautiful TUI application for Unix commands reference",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["unix", "cli", "tui", "commands", "reference"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@google/generative-ai": "^0.14.1",
+    "chalk": "^5.3.0",
+    "commander": "^11.1.0",
+    "inquirer": "^9.2.12",
+    "boxen": "^7.1.1",
+    "marked": "^11.1.0",
+    "marked-terminal": "^6.1.0"
+  }
+} 
