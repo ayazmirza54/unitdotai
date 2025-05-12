@@ -1,0 +1,270 @@
+/* Basic Reset / Global Styles (can also go in index.css) */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333;
+}
+
+.app-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.query-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+  background-color: #fff;
+}
+
+.query-form button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.query-form button:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.query-form button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border: 1px solid #e57373;
+  border-radius: 4px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.ai-response-container {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #e8f6f3;
+  border-radius: 4px;
+  border: 1px solid #d0e9e4;
+}
+
+.ai-response-container h2 {
+  margin-top: 0;
+  color: #16a085;
+  border-bottom: 1px solid #badec8;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Styles for markdown content if needed */
+.ai-response-container pre {
+  background-color: #2d2d2d; /* Dark background for code blocks */
+  color: #f8f8f2; /* Light text for code blocks */
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto; /* Allow horizontal scrolling for long lines */
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  font-size: 0.9em;
+}
+
+.ai-response-container code:not(pre > code) {
+  background-color: #f0f0f0; /* Light gray for inline code */
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+}
+
+.ai-response-container blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  color: #555;
+  margin-left: 0;
+}
+
+.ai-response-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.ai-response-container th,
+.ai-response-container td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.ai-response-container th {
+  background-color: #f9f9f9;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Mimic chalk colors */
+.color-cyan { color: #3498db; }
+.color-magenta { color: #e74c3c; } /* Adjusted magenta for web */
+.color-green { color: #2ecc71; }
+.color-yellow { color: #f1c40f; }
+.color-red { color: #e74c3c; }
+.color-blue { color: #3498db; }
+
+/* Main Menu Styling */
+.main-menu {
+  list-style: none;
+  padding: 0;
+}
+.main-menu li {
+  margin-bottom: 0.75rem;
+}
+.main-menu button {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #bdc3c7;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+.main-menu button:hover:not(:disabled) {
+  background-color: #dfe6e9;
+  border-color: #95a5a6;
+}
+.main-menu button:disabled {
+  background-color: #f4f7f6;
+  color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Command List Styling */
+.command-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.command-list li {
+  margin-bottom: 0.5rem;
+}
+/* Use class for buttons that act like links */
+.link-button {
+  background: none;
+  border: none;
+  color: #3498db; /* Cyan */
+  cursor: pointer;
+  padding: 0.2rem 0;
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.link-button:hover {
+  color: #2980b9;
+}
+
+/* General Button Styling (for back buttons etc.) */
+button:not(.link-button) {
+  background-color: #7f8c8d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-right: 0.5rem; /* Space between buttons */
+}
+button:hover:not(:disabled) {
+  background-color: #6c7a7d;
+}
+button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* AI Mode Form Styling */
+.query-form button {
+  background-color: #e74c3c; /* Magenta-like */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.query-form button:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.query-form button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+/* Markdown content styling (keep existing pre, code, etc.) */
+.ai-response-container pre,
+.command-detail-box pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+}
+/* Ensure boxen styling doesn't override pre background */
+div[style*="border: 2px solid"] pre {
+   background-color: #2d2d2d !important; /* Use important if needed */
+}
+
+.ai-response-container code:not(pre > code),
+.command-detail-box code:not(pre > code) {
+  background-color: #f0f0f0;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
